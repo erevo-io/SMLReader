@@ -56,7 +56,7 @@ public:
         DEBUG("Initializing sensor %s...", this->config->name);
         this->callback = callback;
         this->serial = unique_ptr<SoftwareSerial>(new SoftwareSerial());
-        this->serial->begin(9600, SWSERIAL_8N1, this->config->pin, -1, false);
+        this->serial->begin(9600, SWSERIAL_7E1, this->config->pin, -1, false);
         this->serial->enableTx(false);
         this->serial->enableRx(true);
         DEBUG("Initialized sensor %s.", this->config->name);
